@@ -1,3 +1,6 @@
+<div style="text-align:center"><img src="![die5](https://user-images.githubusercontent.com/42657760/69490763-eae82680-0e40-11ea-8875-2dd75c99549.gif)
+" /></div>
+
 <h1>Introduction</h1>
 
 In this project, you will develop a simulator and multiple strategies for the dice game Hog. You will need to use control statements and higher-order functions together, as described in Sections 1.2 through 1.6 of Composing Programs.
