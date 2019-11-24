@@ -1,4 +1,4 @@
-Introduction
+<h1>Introduction</h1>
 
 In this project, you will develop a simulator and multiple strategies for the dice game Hog. You will need to use control statements and higher-order functions together, as described in Sections 1.2 through 1.6 of Composing Programs.
 
@@ -50,7 +50,7 @@ You should type in what you expect the output to be. To do so, you need to first
 
 You can exit the unlocker by typing exit() (without quotes). Typing Ctrl-C on Windows to exit out of the unlocker has been known to cause problems, so avoid doing so.
 
-Problem 1 (2 pt)
+<h3> Problem 1 (2 pt)</h3>
 
 Implement the roll_dice function in hog.py. It takes two arguments: a positive integer called num_rolls giving the number of dice to roll and a dice function. It returns the number of points scored by rolling the dice that number of times in a turn: either the sum of the outcomes or 1 (Pig Out).
 
@@ -85,7 +85,7 @@ If you find a problem, you need to change your hog.py file, save it, quit Python
 
 Continue debugging your code and running the ok tests until they all pass. You should follow this same procedure of understanding the problem, implementing a solution, testing, and debugging for all the problems on this project.
 
-Problem 2 (1 pt)
+<h3> Problem 2 (1 pt)</h3>
 
 Implement the free_bacon helper function that returns the number of points scored by rolling 0 dice, based on the opponent's current score. You can assume that score is less than 100. For a score less than 10, assume that the first of the two digits is 0.
 
@@ -97,7 +97,7 @@ Once you are done unlocking, begin implementing your solution. You can check you
 python3 ok -q 02
 As noted above, you can also test free_bacon interactively by entering python3 -i hog.py in the terminal and then calling free_bacon with various inputs.
 
-Problem 3 (2 pt)
+<h3> Problem 3 (2 pt)</h3>
 
 Implement the take_turn function, which returns the number of points scored for a turn by rolling the given dice num_rolls times.
 
@@ -112,7 +112,7 @@ Once you are done unlocking, begin implementing your solution. You can check you
 
 python3 ok -q 03
 
-Problem 4 (1 pt)
+<h3> Problem 4 (1 pt)</h3>
 
 Implement is_swap, which returns whether or not the scores should be swapped because the difference between the last two digits of the current player's score is the same as the difference between the last two digits of the opponent's score.
 
@@ -125,7 +125,7 @@ Once you are done unlocking, begin implementing your solution. You can check you
 
 python3 ok -q 04
 
-Problem 5 (2 pt)
+<h3> Problem 5 (2 pt)</h3>
 
 Implement the play function, which simulates a full game of Hog. Players alternate turns rolling dice until one of the players reaches the goal score.
 
@@ -225,7 +225,7 @@ def both(f, g):
         return both(f(score0, score1), g(score0, score1))
     return say
     
-Problem 6 (2 pt)
+<h3> Problem 6 (2 pt)</h3>
 
 Update your play function so that a commentary function is called at the end of each turn. The return value of calling a commentary function gives you the commentary function to call on the next turn.
 
@@ -238,7 +238,7 @@ Once you are done unlocking, begin implementing your solution. You can check you
 
 python3 ok -q 06
 
-Problem 7 (3 pt)
+<h3> Problem 7 (3 pt)</h3>
 
 Implement the announce_highest function, which is a higher-order function that returns a commentary function. This commentary function announces whenever a particular player gains more points in a turn than ever before. To compute the gain, it must compare the score from last turn to the score from this turn for the player of interest, which is designated by the who argument. This function must also keep track of the highest gain for the player so far.
 
@@ -277,7 +277,7 @@ Great work! You just finished Phase 2 of the project!
 Phase 3: Strategies
 In the third phase, you will experiment with ways to improve upon the basic strategy of always rolling a fixed number of dice. First, you need to develop some tools to evaluate strategies.
 
-Problem 8 (2 pt)
+<h3> Problem 8 (2 pt) </h3>
 
 Implement the make_averaged function, which is a higher-order function that takes a function fn as an argument. It returns another function that takes the same number of arguments as fn (the function originally passed into make_averaged). This returned function differs from the input function in that it returns the average value of repeatedly calling fn on the same arguments. This function should call fn a total of num_samples times and return the average of the results.
 
@@ -308,7 +308,7 @@ Once you are done unlocking, begin implementing your solution. You can check you
 
 python3 ok -q 08
 
-Problem 9 (2 pt)
+<h3> Problem 9 (2 pt)</h3>
 
 Implement the max_scoring_num_rolls function, which runs an experiment to determine the number of rolls (from 1 to 10) that gives the maximum average score for a turn. Your implementation should use make_averaged and roll_dice.
 
@@ -327,7 +327,7 @@ Running experiments For the remainder of this project, you can change the implem
 
 Some of the experiments may take up to a minute to run. You can always reduce the number of samples in make_averaged to speed up experiments.
 
-Problem 10 (1 pt)
+<h3> Problem 10 (1 pt)</h3>
 
 A strategy can take advantage of the Free Bacon rule by rolling 0 when it is most beneficial to do so. Implement bacon_strategy, which returns 0 whenever rolling 0 would give at least margin points and returns num_rolls otherwise.
 
@@ -339,7 +339,7 @@ Once you are done unlocking, begin implementing your solution. You can check you
 python3 ok -q 10
 Once you have implemented this strategy, change run_experiments to evaluate your new strategy against the baseline. You should find that it wins more than half of the time.
 
-Problem 11 (2 pt)
+<h3> Problem 11 (2 pt)</h3>
 
 A strategy can also take advantage of the Swine Swap rule. The swap_strategy rolls 0 if it would cause a beneficial swap. It also returns 0 if rolling 0 would give at least margin points, unless this would cause a non-beneficial swap. Otherwise, the strategy rolls num_rolls.
 
@@ -351,7 +351,7 @@ Once you are done unlocking, begin implementing your solution. You can check you
 python3 ok -q 11
 Once you have implemented this strategy, update run_experiments to evaluate your new strategy against the baseline. You should find that it gives a significant edge over always_roll(4).
 
-Optional: Problem 12 (0 pt)
+<h3> Optional: Problem 12 (0 pt)</h3>
 
 Implement final_strategy, which combines these ideas and any other ideas you have to achieve a high win rate against the always_roll(4) strategy. Some suggestions:
 
